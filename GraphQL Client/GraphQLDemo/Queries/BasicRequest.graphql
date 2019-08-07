@@ -1,0 +1,8 @@
+query GetBasicProduct($id: ID!) {
+    product(id: $id) {
+        id
+        name
+        description
+        price(currency: "USD")
+    }
+}

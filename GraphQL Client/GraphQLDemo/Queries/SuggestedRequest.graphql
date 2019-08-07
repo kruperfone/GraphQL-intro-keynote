@@ -1,0 +1,14 @@
+query GetSuggestedProduct($id: ID!) {
+    product(id: $id) {
+        id
+        name
+        description
+        price(currency: "USD")
+        suggestedProducts {
+            id
+            name
+            description
+            price(currency: "USD")
+        }
+    }
+}

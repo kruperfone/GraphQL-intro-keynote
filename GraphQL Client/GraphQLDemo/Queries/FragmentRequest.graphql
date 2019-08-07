@@ -1,0 +1,16 @@
+query GetFragmentProduct($id: ID!) {
+    product(id: $id) {
+        ... ProductFragment
+        suggestedProducts {
+            ... ProductFragment
+        }
+    }
+}
+
+fragment ProductFragment on ProductInterface {
+    id
+    name
+    description
+    price(currency: "USD")
+}
+
